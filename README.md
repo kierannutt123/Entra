@@ -47,7 +47,7 @@ The policy targets the Microsoft 365 cloud application.
 ### Grant Controls
 Access is granted only after successful multi-factor authentication.
 
-![Grant Control](grant access.png)
+![Grant Control](grant-access.png)
 
 ### Policy Mode
 The policy was deployed in **Report-only** mode to safely observe its impact
