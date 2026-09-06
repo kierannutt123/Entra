@@ -24,9 +24,12 @@ This reflects common real-world tasks performed by IT support and junior infrast
 
 ## Scenario
 
-Finance users require stronger authentication controls when accessing Microsoft 365.
-A Conditional Access policy is created to require MFA for members of the Finance security group.
+Finance users require stronger authentication controls when accessing
+Microsoft 365.
 
+Rather than applying the requirement to users individually, the Finance
+users are placed in a security group. A Conditional Access policy then
+targets the group and requires MFA when its members access Microsoft 365.
 ---
 
 ## Policy Configuration
@@ -69,21 +72,24 @@ The sign-in logs show that MFA would have been required if the policy were enfor
 
 ---
 
-## Root Cause Analysis
+## Sign-In Analysis
 
-The sign-in was evaluated against a Conditional Access policy that required MFA
-for Finance users. The user did not provide a second authentication factor,
-which would have caused the sign-in to be blocked if the policy were enforced.
+The sign-in was evaluated against the Conditional Access policy because the
+user was a member of the targeted Finance security group and was accessing
+a targeted Microsoft 365 resource.
+
+The sign-in logs showed that the MFA requirement would have applied if the
+policy had been enabled.
 
 ---
 
-## Resolution
+## Considerations
 
-In a production environment, the user would be required to complete MFA
-registration and authentication before access is granted.
+Before enabling the policy in production, affected users should have an
+appropriate MFA method registered.
 
-For the purposes of this lab, the policy remained in **Report-only** mode
-to demonstrate policy evaluation and troubleshooting without disrupting access.
+Report-only results can be reviewed first to identify unexpected policy
+matches or access issues before the policy is enforced.
 
 ---
 
