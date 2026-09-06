@@ -13,23 +13,15 @@ This reflects common real-world tasks performed by IT support and junior infrast
 
 ---
 
-## Environment
-
-- Microsoft Entra ID (P2 lab tenant)
-- Security groups
-- Conditional Access
-- Microsoft 365 cloud applications
-
----
-
 ## Scenario
 
 Finance users require stronger authentication controls when accessing
-Microsoft 365.
+Microsoft 365. 
 
 Rather than applying the requirement to users individually, the Finance
 users are placed in a security group. A Conditional Access policy then
 targets the group and requires MFA when its members access Microsoft 365.
+
 ---
 
 ## Policy Configuration
