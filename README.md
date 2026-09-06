@@ -1,4 +1,4 @@
-# Entra ID Conditional Access & Sign-In Troubleshooting
+# Entra ID Conditional Access & Sign-In Logs
 
 ## Overview
 
